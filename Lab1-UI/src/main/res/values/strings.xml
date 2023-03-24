@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">LabsCM20231-Gr04</string>
+    <string name="sexo">Sexo:</string>
+    <string name="infoPersonal">Información Personal</string>
+    <string name="nombres">Nombres</string>
+    <string name="requerido">Requerido*</string>
+    <string name="apellidos">Apellidos</string>
+    <string name="hombre">Hombre</string>
+    <string name="mujer">Mujer</string>
+    <string name="fechaNacimiento">Fecha de nacimiento:</string>
+    <string name="seleccionaFecha">Selecciona la fecha</string>
+    <string-array name="listaGrados">
+        <item>Grado de escolaridad</item>
+        <item>Primaria</item>
+        <item>Secundaria</item>
+        <item>Universitario</item>
+        <item>Otro</item>
+    </string-array>
 </resources>
