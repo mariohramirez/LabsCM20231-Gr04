@@ -1,26 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">LabsCM20231-Gr04</string>
-    <string name="sexo">Sex:</string>
-    <string name="infoPersonal">Personal Data</string>
-    <string name="nombres">Names</string>
-    <string name="requerido">Required*</string>
-    <string name="apellidos">Last Name</string>
-    <string name="hombre">Male</string>
-    <string name="mujer">Female</string>
-    <string name="fechaNacimiento">Birthdate:</string>
-    <string name="seleccionaFecha">Select a date</string>
-    <string name="siguiente">Next</string>
-    <string name="telefono">Phone</string>
-    <string name="correo">Mail</string>
-    <string name="pais">Country</string>
-    <string name="ciudad">City</string>
-    <string name="direccion">Adress</string>
+    <string name="sexo">Sexo:</string>
+    <string name="infoPersonal">Información Personal</string>
+    <string name="nombres">Nombres</string>
+    <string name="requerido">Requerido*</string>
+    <string name="apellidos">Apellidos</string>
+    <string name="hombre">Hombre</string>
+    <string name="mujer">Mujer</string>
+    <string name="fechaNacimiento">Fecha de nacimiento:</string>
+    <string name="seleccionaFecha">Selecciona la fecha</string>
+    <string name="siguiente">Siguiente</string>
+    <string name="telefono">Teléfono</string>
+    <string name="correo">Correo</string>
+    <string name="pais">País</string>
+    <string name="ciudad">Ciudad</string>
+    <string name="direccion">Dirección</string>
     <string-array name="listaGrados">
-        <item>School grade</item>
-        <item>Elementary</item>
-        <item>Highscool</item>
-        <item>College</item>
-        <item>Other</item>
+        <item>Grado de escolaridad</item>
+        <item>Primaria</item>
+        <item>Secundaria</item>
+        <item>Universitario</item>
+        <item>Otro</item>
     </string-array>
 
     <string-array name="listaPaises">
@@ -80,5 +81,4 @@
         <item>Itagüí</item>
         <item>Floridablanca</item>
     </string-array>
-
 </resources>

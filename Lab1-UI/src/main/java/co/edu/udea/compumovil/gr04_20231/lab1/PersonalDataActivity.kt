@@ -2,14 +2,17 @@ package co.edu.udea.compumovil.gr04_20231.lab1
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_personal_data.*
+import android.widget.EditText
 
 class PersonalDataActivity : AppCompatActivity() {
+
+    lateinit var dateVar:EditText
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        dateVar =findViewById<EditText>(R.id.dateSelectTextView)
         setContentView(R.layout.activity_personal_data)
 
-        dateSelectTextView.setOnClickListener {
+        dateVar.setOnClickListener {
             showPickerDialog()
         }
 
@@ -22,6 +25,6 @@ class PersonalDataActivity : AppCompatActivity() {
     }
 
     private fun onDateSelected(day: Int, month: Int, year: Int) {
-        dateSelectTextView.setText("$day/$month/$year")
+        dateVar.setText("$day/$month/$year")
     }
 }

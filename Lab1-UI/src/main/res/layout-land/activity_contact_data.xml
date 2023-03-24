@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PersonalDataActivity">
+    tools:context=".ContactDataActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -17,137 +17,114 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/nameContainer"
+        android:id="@+id/phoneContainer"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
-        android:hint="@string/nombres"
+        android:hint="@string/telefono"
         app:counterEnabled="true"
-        app:counterMaxLength="30"
+        app:counterMaxLength="20"
         app:endIconMode="clear_text"
         app:helperText="@string/requerido"
         app:helperTextTextColor="@color/red"
-        app:layout_constraintEnd_toStartOf="@+id/lastNameContainer"
+        app:layout_constraintEnd_toStartOf="@+id/mailContainer"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        app:startIconDrawable="@drawable/ic_person">
+        app:startIconDrawable="@drawable/ic_phone">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/nameEditText"
+            android:id="@+id/phoneEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="phone"
             android:maxLength="30" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/lastNameContainer"
+        android:id="@+id/mailContainer"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
-        android:hint="@string/apellidos"
-        app:counterEnabled="true"
-        app:counterMaxLength="30"
+        android:hint="@string/correo"
         app:endIconMode="clear_text"
         app:helperText="@string/requerido"
         app:helperTextTextColor="@color/red"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/nameContainer"
+        app:layout_constraintStart_toEndOf="@+id/phoneContainer"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        app:startIconDrawable="@drawable/ic_person_add">
+        app:startIconDrawable="@drawable/ic_mail">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/lastNameEditText"
+            android:id="@+id/mailEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:maxLength="30" />
+            android:inputType="textEmailAddress" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <RadioGroup
-        android:id="@+id/sexContainer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="164dp"
-        android:layout_marginRight="164dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lastNameContainer">
 
-        <RadioButton
-            android:id="@+id/maleButton"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="32dp"
-            android:text="@string/hombre" />
-
-        <RadioButton
-            android:id="@+id/femaleButton"
-            android:layout_width="100dp"
-
-            android:layout_height="wrap_content"
-            android:text="@string/mujer" />
-
-    </RadioGroup>
-
-    <TextView
-        android:id="@+id/sexTextView"
-        android:layout_width="62dp"
-        android:layout_height="17dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="32dp"
-        android:drawableLeft="@drawable/ic_group"
-        android:text="@string/sexo"
-        app:layout_constraintEnd_toStartOf="@+id/sexContainer"
-        app:layout_constraintHorizontal_bias="0.866"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lastNameContainer" />
-
-    <TextView
-        android:id="@+id/dateTextview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="200dp"
-        android:layout_marginLeft="200dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/fechaNacimiento"
-        android:drawableLeft="@drawable/ic_calendar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sexContainer" />
-
-    <TextView
-        android:id="@+id/dateSelectTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="16dp"
-        android:layout_toRightOf="@+id/dateTextview"
-        android:text="@string/seleccionaFecha"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.234"
-        app:layout_constraintStart_toEndOf="@+id/dateTextview"
-        app:layout_constraintTop_toBottomOf="@+id/sexContainer" />
-
-    <Spinner
-        android:id="@+id/schoolSpinner"
-        android:layout_width="wrap_content"
+    <AutoCompleteTextView
+        android:id="@+id/countryAutoComplete"
+        android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
         android:layout_marginTop="16dp"
-        android:entries="@array/listaGrados"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:drawableLeft="@drawable/ic_country"
+        android:hint="@string/pais"
+        app:layout_constraintEnd_toStartOf="@+id/cityAutoComplete"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dateTextview" />
+        app:layout_constraintTop_toBottomOf="@+id/mailContainer" />
+
+    <AutoCompleteTextView
+        android:id="@+id/cityAutoComplete"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:drawableLeft="@drawable/ic_city"
+        android:hint="@string/ciudad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/countryAutoComplete"
+        app:layout_constraintTop_toBottomOf="@+id/mailContainer" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/adressContainer"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:hint="@string/direccion"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cityAutoComplete"
+        app:startIconDrawable="@drawable/ic_adress">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/adressEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textNoSuggestions" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/nextButton"
@@ -156,9 +133,8 @@
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginBottom="16dp"
-        android:text="Siguiente"
+        android:text="@string/siguiente"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
