@@ -15,6 +15,12 @@
     <string name="pais">Country</string>
     <string name="ciudad">City</string>
     <string name="direccion">Adress</string>
+    <string name="toastMessageName">Name field is required</string>
+    <string name="toastMessageLastName">Last name field is required</string>
+    <string name="toastMessageDate">A birthdate is required</string>
+    <string name="toastMessagePhone">Phone field is required</string>
+    <string name="toastMessageMail">Mail field is required</string>
+    <string name="toastMessageCountry">Country field is required</string>
     <string-array name="listaGrados">
         <item>School grade</item>
         <item>Elementary</item>
