@@ -16,6 +16,12 @@
     <string name="pais">País</string>
     <string name="ciudad">Ciudad</string>
     <string name="direccion">Dirección</string>
+    <string name="toastMessageName">El campo de nombre es requerido</string>
+    <string name="toastMessageLastName">El campo de apellido es requerido</string>
+    <string name="toastMessageDate">Una fecha de nacimiento es requerida</string>
+    <string name="toastMessagePhone">El campo de telefono es requerido</string>
+    <string name="toastMessageMail">El campo de correo es requerido</string>
+    <string name="toastMessageCountry">El campo de país es requerido</string>
     <string-array name="listaGrados">
         <item>Grado de escolaridad</item>
         <item>Primaria</item>
